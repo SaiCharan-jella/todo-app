@@ -1,0 +1,83 @@
+.main-app {
+  background-color: #7d8cc4;
+  min-height: 100vh;
+  padding: 20px 12px;
+}
+.TaskContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: white;
+  width: min(100%, 500px);
+  min-height: 75vh;
+  border-radius: 8px;
+  padding-bottom: 12px;
+  overflow: hidden;
+}
+h3 {
+  margin-top: 10px;
+}
+.AddInput {
+  display: flex;
+  gap: 8px;
+  padding: 16px;
+  width: 100%;
+}
+.AddInput button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.TodoItems {
+  width: 100%;
+}
+.TodoItems ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.TodoItems li {
+  padding: 8px 20px;
+  border-bottom: 1px solid #eee;
+  gap: 10px;
+}
+.TodoList-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.TodoItems li span {
+  flex: 1;
+  text-align: left;
+  word-break: break-word;
+}
+
+@media (max-width: 576px) {
+  .main-app {
+    padding: 12px;
+  }
+
+  .TaskContainer {
+    width: 100%;
+    min-height: auto;
+    border-radius: 10px;
+  }
+
+  .AddInput {
+    padding: 12px;
+  }
+
+  .TodoItems li {
+    flex-direction: column;
+    align-items: flex-start !important;
+    padding: 10px 12px;
+  }
+
+  .TodoList-buttons {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
