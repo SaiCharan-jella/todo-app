@@ -1,9 +1,16 @@
 import { useState } from "react";
+import { useEffect } from "react";
 import AddTodo from "./AddTodo";
 import TodoItems from "./TodoItems";
 
 const TodoList = () => {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(() => {
+    const saved = localStorage.getItem("todos");
+    return saved ? JSON.parse(saved) : [];
+  });
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
   const addTodo = (text) => {
     setTodos((prevTodos) => [
       ...prevTodos,
