@@ -5,10 +5,7 @@ const TodoItems = ({ todos, deleteTodo, completeTodo }) => {
     <div className="TodoItems">
       <ul>
         {todos.map((todo) => (
-          <li
-            key={todo.id}
-            className="d-flex justify-content-between align-items-center"
-          >
+          <li key={todo.id} className="todo-row">
             <span
               style={{
                 textDecoration: todo.completed ? "line-through" : "none",
@@ -19,7 +16,7 @@ const TodoItems = ({ todos, deleteTodo, completeTodo }) => {
             <div className="TodoList-buttons ">
               {!todo.completed && (
                 <button
-                  className="btn btn-success btn-sm me-2"
+                  className="btn btn-success btn-sm"
                   onClick={() => completeTodo(todo.id)}
                 >
                   Complete

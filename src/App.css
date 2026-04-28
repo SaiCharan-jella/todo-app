@@ -71,13 +71,28 @@ h3 {
   }
 
   .TodoItems li {
-    flex-direction: column;
-    align-items: flex-start !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between;
+    gap: 10px;
     padding: 10px 12px;
   }
 
+  .TodoItems li span {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+    line-height: 1.2;
+  }
+
   .TodoList-buttons {
-    width: 100%;
+    display: flex;
+    width: auto;
+    margin-left: auto;
     justify-content: flex-end;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 8px;
   }
 }
